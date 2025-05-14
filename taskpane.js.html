@@ -1,0 +1,13 @@
+function genereerEmail() {
+    const ref = document.getElementById("referentie").value;
+    const factuur = document.getElementById("factuur").value;
+    const reden = document.getElementById("bedrag").value;
+    const bedrag = document.getElementById("bedrag").value
+
+    const onderwerp = `[Claim] | Ref: ${referentie} | Inv: ${factuur}`
+    const body = `Dear Sir/Madam,\n\nWe hereby submit a new claim, referencing ${referentie}, concerning invoice ${factuur}.\n\nPlease find the additional details below:\n${reden}\n\nWe kindly request a credit note for the amount of ${bedrag}.\n\nThank you in advance for your cooperation.\n\nShould you need any further information, please do not hesitate to contact us.`;
+
+
+    Office.context.mailbox.item.subject.setAsync(onderwerp);
+    Office.context.mailbox.item.body.setAsync(body);
+}

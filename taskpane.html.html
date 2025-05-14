@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body, input, textarea, button {
+      font-family: Calibri, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <form id="claimForm">
+    <h3>Nieuwe Claim</h3>
+    
+    <label>Referentie:</label><br>
+    <input type="text" id="referentie" /><br>
+    
+    <label>Factuur:</label><br>
+    <input type="text" id="factuur" /><br>
+    
+    <label>Bedrag:</label><br>
+    <input type="text" id="bedrag" /><br>
+    
+    <label>Reden:</label><br>
+    <textarea id="reden"></textarea><br><br>
+    
+    <button type="button" onclick="genereerEmail()">Genereer e-mail</button>
+  </form>
+</body>
+</html>

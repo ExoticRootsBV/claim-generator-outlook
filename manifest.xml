@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+
+  <Id>your-unique-app-id</Id>
+  <Version>1.0</Version>
+  <ProviderName>Your Company</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName>Claim Generator</DisplayName>
+  <Description>A simple Outlook Add-in to generate claim emails.</Description>
+
+  <Permissions>ReadWriteItem</Permissions>
+
+  <Hosts>
+    <Host Name="Outlook" />
+  </Hosts>
+
+  <TaskpaneApp>
+    <SourceLocation DefaultValue="https://yourdomain.com/taskpane.html" />
+    <RequestedHeight>500</RequestedHeight>
+    <RequestedWidth>400</RequestedWidth>
+  </TaskpaneApp>
+
+  <IconUrl DefaultValue="https://yourdomain.com/icon.png" />
+  <SupportUrl DefaultValue="https://yourdomain.com/support" />
+</OfficeApp>
